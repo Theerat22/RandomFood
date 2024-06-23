@@ -14,6 +14,9 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Image("pernil")
+                .resizable()
+                .frame(width: 50, height: 50)
         }
         .padding()
     }
