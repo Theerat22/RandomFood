@@ -7,18 +7,33 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @State private var animateGradient: Bool = false
+        
+        private let startColor: Color = .blue
+        private let endColor: Color = .green
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Image("pernil")
-                .resizable()
-                .frame(width: 50, height: 50)
+            Text("🍛")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Text("Gin Rai Dee?")
+                .font(.title)
+                .fontWeight(.bold)
+            Button(action: { }, label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .frame(width: 200, height: 50)
+                    Text("Start your meal")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color.white)
+                }
+                
+            })
         }
-        .padding()
     }
 }
 
