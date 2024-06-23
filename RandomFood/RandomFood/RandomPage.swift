@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RandomPage: View {
+    @State private var isAnimating = false
     @Binding var menupassed: menulist
     @State var dessertlist : [mealList] = [
         mealList(name: "Aperol Spritz Trifles", imageDir: "aperolSpritzTrifles", menuType: "dessert"),
@@ -74,6 +75,13 @@ struct RandomPage: View {
                         .cornerRadius(20)
                         .padding(10)
                         .shadow(radius: 10)
+                        .scaleEffect(isAnimating ? 1.1 : 1.0)
+                        .onAppear() {
+                          withAnimation(.easeInOut(duration: 1.0).repeatForever(autoreverses: true)) {
+                            isAnimating = true
+                          }
+                        }
+                    
                     Text(foodlist[randomNumber].name)
                         .font(.title2)
                         .italic()
@@ -86,6 +94,12 @@ struct RandomPage: View {
                         .cornerRadius(20)
                         .padding(10)
                         .shadow(radius: 10)
+                        .scaleEffect(isAnimating ? 1.1 : 1.0)
+                        .onAppear() {
+                          withAnimation(.easeInOut(duration: 1.0).repeatForever(autoreverses: true)) {
+                            isAnimating = true
+                          }
+                        }
                     Text(drinkslist[randomNumber].name)
                         .font(.title2)
                         .italic()
@@ -97,6 +111,12 @@ struct RandomPage: View {
                         .cornerRadius(20)
                         .padding(10)
                         .shadow(radius: 10)
+                        .scaleEffect(isAnimating ? 1.1 : 1.0)
+                        .onAppear() {
+                          withAnimation(.easeInOut(duration: 1.0).repeatForever(autoreverses: true)) {
+                            isAnimating = true
+                          }
+                        }
                     Text(dessertlist[randomNumber].name)
                         .font(.title2)
                         .italic()
