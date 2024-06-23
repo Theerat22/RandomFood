@@ -90,21 +90,6 @@ struct ContentView: View {
 
 
 
-
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(width: 200, height: 50)
-                    Text("Start your meal")
-                        .font(.title2)
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color.white)
-                }
-                            
-        }
-    }
-}
-
-
 #Preview {
     ContentView()
 }
