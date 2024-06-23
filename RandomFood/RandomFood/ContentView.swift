@@ -21,6 +21,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .edgesIgnoringSafeArea(.all)
             
+
             LinearGradient(gradient: Gradient(colors: [Color.orange.opacity(0.8), Color.clear]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             
@@ -88,6 +89,20 @@ struct ContentView: View {
             }
 
 
+
+
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .frame(width: 200, height: 50)
+                    Text("Start your meal")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color.white)
+                }
+                            
+        }
+    }
+}
 
 
 #Preview {

@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct SelectRowView: View {
-    @Binding var select:String
+    @Binding var menupassed: menulist
+    
     var body: some View {
-        Button(action: { }, label: {
+
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
                     .frame(width: 200, height: 50)
-                Text(select)
+                Text(menupassed.name)
                     .font(.title2)
                     .fontWeight(.heavy)
                     .foregroundColor(Color.white)
             }
-            
-        })
+        
     }
 }
 
-#Preview {
-    @State var selectpreview = "Random Meal"
-    return SelectRowView(select: $selectpreview)
-}
+//#Preview {
+//    @State var selectpreview = menulist(name: "Random Food",menuType: "Food")
+//    return SelectRowView(menupassed: $selectpreview)
+//}

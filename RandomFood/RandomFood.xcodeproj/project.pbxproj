@@ -15,6 +15,9 @@
 		34D15E492C27D419008B7D41 /* RandomFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E482C27D419008B7D41 /* RandomFoodUITests.swift */; };
 		34D15E4B2C27D419008B7D41 /* RandomFoodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E4A2C27D419008B7D41 /* RandomFoodUITestsLaunchTests.swift */; };
 		34D15E5A2C27DCF8008B7D41 /* SelectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E592C27DCF7008B7D41 /* SelectRowView.swift */; };
+		34D15E5C2C27E135008B7D41 /* SelectPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E5B2C27E135008B7D41 /* SelectPage.swift */; };
+		34D15E5E2C27E48A008B7D41 /* RandomPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E5D2C27E48A008B7D41 /* RandomPage.swift */; };
+		34D15E602C27EBFD008B7D41 /* FoodStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E5F2C27EBFD008B7D41 /* FoodStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		34D15E482C27D419008B7D41 /* RandomFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFoodUITests.swift; sourceTree = "<group>"; };
 		34D15E4A2C27D419008B7D41 /* RandomFoodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFoodUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		34D15E592C27DCF7008B7D41 /* SelectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRowView.swift; sourceTree = "<group>"; };
+		34D15E5B2C27E135008B7D41 /* SelectPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPage.swift; sourceTree = "<group>"; };
+		34D15E5D2C27E48A008B7D41 /* RandomPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPage.swift; sourceTree = "<group>"; };
+		34D15E5F2C27EBFD008B7D41 /* FoodStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 				34D15E2D2C27D417008B7D41 /* RandomFoodApp.swift */,
 				34D15E2F2C27D417008B7D41 /* ContentView.swift */,
 				34D15E592C27DCF7008B7D41 /* SelectRowView.swift */,
+				34D15E5B2C27E135008B7D41 /* SelectPage.swift */,
+				34D15E5D2C27E48A008B7D41 /* RandomPage.swift */,
+				34D15E5F2C27EBFD008B7D41 /* FoodStruct.swift */,
 				34D15E312C27D419008B7D41 /* Assets.xcassets */,
 				34D15E332C27D419008B7D41 /* Preview Content */,
 			);
@@ -260,6 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D15E5E2C27E48A008B7D41 /* RandomPage.swift in Sources */,
+				34D15E5C2C27E135008B7D41 /* SelectPage.swift in Sources */,
+				34D15E602C27EBFD008B7D41 /* FoodStruct.swift in Sources */,
 				34D15E302C27D417008B7D41 /* ContentView.swift in Sources */,
 				34D15E5A2C27DCF8008B7D41 /* SelectRowView.swift in Sources */,
 				34D15E2E2C27D417008B7D41 /* RandomFoodApp.swift in Sources */,
