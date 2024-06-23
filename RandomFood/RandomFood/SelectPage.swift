@@ -9,9 +9,9 @@ import SwiftUI
 
 struct SelectPage: View {
     @State var selectList: [menulist] = [
-        menulist(name: "Random Food"),
-        menulist(name: "Random Drinks"),
-        menulist(name: "Random Dessert")
+        menulist(name: "Random Food",menuType: "food"),
+        menulist(name: "Random Drinks",menuType: "drinks"),
+        menulist(name: "Random Dessert",menuType: "dessert")
     ]
     var body: some View {
         NavigationStack{
