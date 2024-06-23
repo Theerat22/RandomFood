@@ -9,13 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var animateGradient: Bool = false
-        
-        private let startColor: Color = .blue
-        private let endColor: Color = .green
-    
     var body: some View {
-        
         VStack {
             Text("🍛")
                 .font(.largeTitle)
@@ -23,7 +17,8 @@ struct ContentView: View {
             Text("Gin Rai Dee?")
                 .font(.title)
                 .fontWeight(.bold)
-            Button(action: { }, label: {
+            
+            Button(action: {}, label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 200, height: 50)
@@ -34,6 +29,7 @@ struct ContentView: View {
                 }
                 
             })
+            
         }
     }
 }
