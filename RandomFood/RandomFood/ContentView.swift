@@ -15,6 +15,7 @@ struct ContentView: View {
         private let endColor: Color = .green
     
     var body: some View {
+        
         VStack {
             Text("🍛")
                 .font(.largeTitle)

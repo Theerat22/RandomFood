@@ -14,6 +14,7 @@
 		34D15E3F2C27D419008B7D41 /* RandomFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E3E2C27D419008B7D41 /* RandomFoodTests.swift */; };
 		34D15E492C27D419008B7D41 /* RandomFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E482C27D419008B7D41 /* RandomFoodUITests.swift */; };
 		34D15E4B2C27D419008B7D41 /* RandomFoodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E4A2C27D419008B7D41 /* RandomFoodUITestsLaunchTests.swift */; };
+		34D15E582C27DB48008B7D41 /* Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D15E572C27DB48008B7D41 /* Select.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		34D15E442C27D419008B7D41 /* RandomFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D15E482C27D419008B7D41 /* RandomFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFoodUITests.swift; sourceTree = "<group>"; };
 		34D15E4A2C27D419008B7D41 /* RandomFoodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFoodUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34D15E572C27DB48008B7D41 /* Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				34D15E2D2C27D417008B7D41 /* RandomFoodApp.swift */,
 				34D15E2F2C27D417008B7D41 /* ContentView.swift */,
+				34D15E572C27DB48008B7D41 /* Select.swift */,
 				34D15E312C27D419008B7D41 /* Assets.xcassets */,
 				34D15E332C27D419008B7D41 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				34D15E302C27D417008B7D41 /* ContentView.swift in Sources */,
 				34D15E2E2C27D417008B7D41 /* RandomFoodApp.swift in Sources */,
+				34D15E582C27DB48008B7D41 /* Select.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
