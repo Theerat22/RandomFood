@@ -18,7 +18,6 @@ struct ContentView: View {
                 .font(.title)
                 .fontWeight(.bold)
             
-            Button(action: {}, label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 200, height: 50)
@@ -27,9 +26,7 @@ struct ContentView: View {
                         .fontWeight(.heavy)
                         .foregroundColor(Color.white)
                 }
-                
-            })
-            
+                            
         }
     }
 }
