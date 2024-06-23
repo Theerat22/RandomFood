@@ -24,7 +24,7 @@ struct SelectRowView: View {
     }
 }
 
-#Preview {
-    @State var selectpreview = menulist(name: "Random Food",menuType: "Food")
-    return SelectRowView(menupassed: $selectpreview)
-}
+//#Preview {
+//    @State var selectpreview = menulist(name: "Random Food",menuType: "Food")
+//    return SelectRowView(menupassed: $selectpreview)
+//}

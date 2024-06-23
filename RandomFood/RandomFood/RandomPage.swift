@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RandomPage: View {
     @Binding var menupassed: menulist
-    @State var meallist : [mealList] = [
+    @State var dessertlist : [mealList] = [
         mealList(name: "aperolSpritzTrifles", imageDir: "aperolSpritzTrifles", menuType: "dessert"),
         mealList(name: "bananaPudding", imageDir: "bananaPudding", menuType: "dessert"),
         mealList(name: "blueberryCheesecake", imageDir: "blueberryCheesecake", menuType: "dessert"),
@@ -19,7 +19,9 @@ struct RandomPage: View {
         mealList(name: "EspressoCookies", imageDir: "EspressoCookies", menuType: "dessert"),
         mealList(name: "Granita", imageDir: "Granita", menuType: "dessert"),
         mealList(name: "keyLimePieMousse", imageDir: "keyLimePieMousse", menuType: "dessert"),
-        mealList(name: "strawberryCrunchPokeCake", imageDir: "strawberryCrunchPokeCake", menuType: "dessert"),
+        mealList(name: "strawberryCrunchPokeCake", imageDir: "strawberryCrunchPokeCake", menuType: "dessert")
+    ]
+    @State var drinkslist : [mealList] = [
         mealList(name: "aviation", imageDir: "aviation", menuType: "drinks"),
         mealList(name: "kirRoyale", imageDir: "kirRoyale", menuType: "drinks"),
         mealList(name: "margarita", imageDir: "margarita", menuType: "drinks"),
@@ -29,26 +31,35 @@ struct RandomPage: View {
         mealList(name: "roseEsLemonade", imageDir: "roseEsLemonade", menuType: "drinks"),
         mealList(name: "roseMilk", imageDir: "roseMilk", menuType: "drinks"),
         mealList(name: "spritz", imageDir: "spritz", menuType: "drinks"),
-        mealList(name: "vesper", imageDir: "vesper", menuType: "drinks"),
-        mealList(name: "chickenParmesanSpaghetti", imageDir: "chickenParmesanSpaghetti", menuType: "meals"),
-        mealList(name: "crockpotSpareribs", imageDir: "crockpotSpareribs", menuType: "meals"),
-        mealList(name: "cubeSteakandGravy", imageDir: "cubeSteakandGravy", menuType: "meals"),
-        mealList(name: "florentineButterChicken", imageDir: "florentineButterChicken", menuType: "meals"),
-        mealList(name: "padThai", imageDir: "padThai", menuType: "meals"),
-        mealList(name: "pernil", imageDir: "pernil", menuType: "meals"),
-        mealList(name: "roastBeefTenderloin", imageDir: "roastBeefTenderloin", menuType: "meals"),
-        mealList(name: "saucyPorkPosole", imageDir: "saucyPorkPosole", menuType: "meals"),
-        mealList(name: "tomyumkoong", imageDir: "tomyumkoong", menuType: "meals")
+        mealList(name: "vesper", imageDir: "vesper", menuType: "drinks")
     ]
+    @State var foodlist : [mealList] = [
+        mealList(name: "chickenParmesanSpaghetti", imageDir: "chickenParmesanSpaghetti", menuType: "food"),
+        mealList(name: "crockpotSpareribs", imageDir: "crockpotSpareribs", menuType: "food"),
+        mealList(name: "cubeSteakandGravy", imageDir: "cubeSteakandGravy", menuType: "food"),
+        mealList(name: "florentineButterChicken", imageDir: "florentineButterChicken", menuType: "food"),
+        mealList(name: "padThai", imageDir: "padThai", menuType: "food"),
+        mealList(name: "pernil", imageDir: "pernil", menuType: "food"),
+        mealList(name: "roastBeefTenderloin", imageDir: "roastBeefTenderloin", menuType: "food"),
+        mealList(name: "saucyPorkPosole", imageDir: "saucyPorkPosole", menuType: "food"),
+        mealList(name: "tomyumkoong", imageDir: "tomyumkoong", menuType: "food")
+    ]
+    @State var selectlist = ["dessertlist","drinkslist","foodlist"]
+    
+    @State private var randomNumber = 0
     var body: some View {
-        Text(menupassed.name)
-        Text(menupassed.menuType)
-        Image(meallist[10].imageDir)
-            .resizable()
-            .frame(width: 100,height: 100)
+        VStack{
+            Text(menupassed.name)
+                .font(.title)
+                .fontWeight(.bold)
+        }
+
+        let selectedlist = selectlist[menupassed.menuType]
+        
+        if selectedlist == "foodlist" {
+            Text(foodlist[3].imageDir)
+        }
+        
+        
     }
 }
-
-//#Preview {
-//    RandomPage()
-//}

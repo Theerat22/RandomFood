@@ -10,7 +10,7 @@ import Foundation
 struct menulist: Identifiable{
     var id:UUID = UUID()
     var name:String
-    var menuType:String
+    var menuType:Int
 }
 
 struct mealList: Identifiable{
