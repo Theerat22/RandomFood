@@ -15,6 +15,7 @@ struct SelectRowView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
                     .frame(width: 200, height: 50)
+                    .foregroundColor(.black)
                     
                 Text(menupassed.name)
                     .font(.title2)

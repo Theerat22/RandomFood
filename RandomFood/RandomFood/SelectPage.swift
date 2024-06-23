@@ -15,21 +15,33 @@ struct SelectPage: View {
     ]
     var body: some View {
         NavigationStack{
-            VStack{
-                Text("Select Random")
-                    .font(.title)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            }
-            VStack{
-                ForEach($selectList){
-                    singlemenu in
-                    NavigationLink{
-                        RandomPage(menupassed:singlemenu)
-                    } label: {
-                        SelectRowView(menupassed: singlemenu)
+            ZStack {
+                Image("granita")
+                    .resizable()
+                    .opacity(0.2)
+                    .cornerRadius(20)
+                    .edgesIgnoringSafeArea(.all)
+                
+                
+                LinearGradient(gradient: Gradient(colors: [Color.orange.opacity(0.8), Color.clear]), startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack{
+                    Text("Select Random")
+                        .font(.title)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+
+                    ForEach($selectList){
+                        singlemenu in
+                        NavigationLink{
+                            RandomPage(menupassed:singlemenu)
+                        } label: {
+                            SelectRowView(menupassed: singlemenu)
+                        }
                     }
                 }
             }
+
         }
     }
 }
