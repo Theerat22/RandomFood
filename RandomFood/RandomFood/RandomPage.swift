@@ -10,39 +10,40 @@ import SwiftUI
 struct RandomPage: View {
     @Binding var menupassed: menulist
     @State var dessertlist : [mealList] = [
-        mealList(name: "aperolSpritzTrifles", imageDir: "aperolSpritzTrifles", menuType: "dessert"),
-        mealList(name: "bananaPudding", imageDir: "bananaPudding", menuType: "dessert"),
-        mealList(name: "blueberryCheesecake", imageDir: "blueberryCheesecake", menuType: "dessert"),
-        mealList(name: "chocolateChipCookies", imageDir: "chocolateChipCookies", menuType: "dessert"),
-        mealList(name: "DalgonaWhippedChocolate", imageDir: "DalgonaWhippedChocolate", menuType: "dessert"),
-        mealList(name: "drumstickPie", imageDir: "drumstickPie", menuType: "dessert"),
-        mealList(name: "EspressoCookies", imageDir: "EspressoCookies", menuType: "dessert"),
-        mealList(name: "Granita", imageDir: "Granita", menuType: "dessert"),
-        mealList(name: "keyLimePieMousse", imageDir: "keyLimePieMousse", menuType: "dessert"),
-        mealList(name: "strawberryCrunchPokeCake", imageDir: "strawberryCrunchPokeCake", menuType: "dessert")
+        mealList(name: "Aperol Spritz Trifles", imageDir: "aperolSpritzTrifles", menuType: "dessert"),
+        mealList(name: "Banana Pudding", imageDir: "bananaPudding", menuType: "dessert"),
+        mealList(name: "Blueberry Cheesecake", imageDir: "blueberryCheesecake", menuType: "dessert"),
+        mealList(name: "Chocolate Chip Cookies", imageDir: "chocolateChipCookies", menuType: "dessert"),
+        mealList(name: "Dalgona Whipped Chocolate", imageDir: "DalgonaWhippedChocolate", menuType: "dessert"),
+        mealList(name: "Drumstick Pie", imageDir: "drumstickPie", menuType: "dessert"),
+        mealList(name: "Espresso Cookies", imageDir: "espressoCookies", menuType: "dessert"),
+        mealList(name: "Granita", imageDir: "granita", menuType: "dessert"),
+        mealList(name: "Key Lime PieMousse", imageDir: "keyLimePieMousse", menuType: "dessert"),
+        mealList(name: "Strawberry Crunch Poke Cake", imageDir: "strawberryCrunchPokeCake", menuType: "dessert")
     ]
     @State var drinkslist : [mealList] = [
-        mealList(name: "aviation", imageDir: "aviation", menuType: "drinks"),
-        mealList(name: "kirRoyale", imageDir: "kirRoyale", menuType: "drinks"),
-        mealList(name: "margarita", imageDir: "margarita", menuType: "drinks"),
-        mealList(name: "meyerLemonMartini", imageDir: "meyerLemonMartini", menuType: "drinks"),
-        mealList(name: "mimosa", imageDir: "mimosa", menuType: "drinks"),
-        mealList(name: "mintJulep", imageDir: "mintJulep", menuType: "drinks"),
-        mealList(name: "roseEsLemonade", imageDir: "roseEsLemonade", menuType: "drinks"),
-        mealList(name: "roseMilk", imageDir: "roseMilk", menuType: "drinks"),
-        mealList(name: "spritz", imageDir: "spritz", menuType: "drinks"),
-        mealList(name: "vesper", imageDir: "vesper", menuType: "drinks")
+        mealList(name: "Aviation", imageDir: "aviation", menuType: "drinks"),
+        mealList(name: "Kir Royale", imageDir: "kirRoyale", menuType: "drinks"),
+        mealList(name: "Margarita", imageDir: "margarita", menuType: "drinks"),
+        mealList(name: "Meyer Lemon Martini", imageDir: "meyerLemonMartini", menuType: "drinks"),
+        mealList(name: "Mimosa", imageDir: "mimosa", menuType: "drinks"),
+        mealList(name: "MintJulep", imageDir: "mintJulep", menuType: "drinks"),
+        mealList(name: "Rose Es Lemonade", imageDir: "roseEsLemonade", menuType: "drinks"),
+        mealList(name: "Rose Milk", imageDir: "roseMilk", menuType: "drinks"),
+        mealList(name: "Spritz", imageDir: "spritz", menuType: "drinks"),
+        mealList(name: "Vesper", imageDir: "vesper", menuType: "drinks")
     ]
     @State var foodlist : [mealList] = [
-        mealList(name: "chickenParmesanSpaghetti", imageDir: "chickenParmesanSpaghetti", menuType: "food"),
-        mealList(name: "crockpotSpareribs", imageDir: "crockpotSpareribs", menuType: "food"),
-        mealList(name: "cubeSteakandGravy", imageDir: "cubeSteakandGravy", menuType: "food"),
-        mealList(name: "florentineButterChicken", imageDir: "florentineButterChicken", menuType: "food"),
-        mealList(name: "padThai", imageDir: "padThai", menuType: "food"),
-        mealList(name: "pernil", imageDir: "pernil", menuType: "food"),
-        mealList(name: "roastBeefTenderloin", imageDir: "roastBeefTenderloin", menuType: "food"),
-        mealList(name: "saucyPorkPosole", imageDir: "saucyPorkPosole", menuType: "food"),
-        mealList(name: "tomyumkoong", imageDir: "tomyumkoong", menuType: "food")
+        mealList(name: "Chicken Parmesan Spaghetti", imageDir: "chickenParmesanSpaghetti", menuType: "food"),
+        mealList(name: "Crockpot Spareribs", imageDir: "crockpotSpareribs", menuType: "food"),
+        mealList(name: "Cube Steak and Gravy", imageDir: "cubeSteakandGravy", menuType: "food"),
+        mealList(name: "Florentine Butter Chicken", imageDir: "florentineButterChicken", menuType: "food"),
+        mealList(name: "Pad Thai", imageDir: "padThai", menuType: "food"),
+        mealList(name: "Pernil", imageDir: "pernil", menuType: "food"),
+        mealList(name: "Roast Beef Tenderloin", imageDir: "roastBeefTenderloin", menuType: "food"),
+        mealList(name: "Saucy Pork-Chop Skillet", imageDir: "saucyPorkChopSkillet", menuType: "food"),
+        mealList(name: "Smoky Pork Posole", imageDir: "smokyPorkPosole", menuType: "food"),
+        mealList(name: "Tom Yum Koong", imageDir: "tomyumkoong", menuType: "food")
     ]
     @State var selectlist = ["dessertlist","drinkslist","foodlist"]
     
@@ -53,13 +54,34 @@ struct RandomPage: View {
                 .font(.title)
                 .fontWeight(.bold)
         }
-
+        
         let selectedlist = selectlist[menupassed.menuType]
         
         if selectedlist == "foodlist" {
-            Text(foodlist[3].imageDir)
+            Image(foodlist[randomNumber].imageDir)
+                .resizable()
+                .frame(width: 250,height: 250)
+            Text(foodlist[randomNumber].name)
+                .font(.subheadline)
         }
-        
+        if selectedlist == "drinkslist" {
+            Image(drinkslist[randomNumber].imageDir)
+                .resizable()
+                .frame(width: 250,height: 250)
+            Text(drinkslist[randomNumber].name)
+                .font(.subheadline)
+        }
+        if selectedlist == "dessertlist" {
+            Image(dessertlist[randomNumber].imageDir)
+                .resizable()
+                .frame(width: 250,height: 250)
+            Text(dessertlist[randomNumber].name)
+                .font(.subheadline)
+        }
+        Button("Random"){
+            randomNumber = Int.random(in: 0...8)
+        }
+
         
     }
 }
