@@ -49,39 +49,67 @@ struct RandomPage: View {
     
     @State private var randomNumber = Int.random(in: 0...8)
     var body: some View {
-        VStack{
-            Text(menupassed.name)
-                .font(.title)
-                .fontWeight(.bold)
-        }
         
-        let selectedlist = selectlist[menupassed.menuType]
-        
-        if selectedlist == "foodlist" {
-            Image(foodlist[randomNumber].imageDir)
-                .resizable()
-                .frame(width: 250,height: 250)
-            Text(foodlist[randomNumber].name)
-                .font(.title2)
-        }
-        if selectedlist == "drinkslist" {
-            Image(drinkslist[randomNumber].imageDir)
-                .resizable()
-                .frame(width: 250,height: 250)
-            Text(drinkslist[randomNumber].name)
-                .font(.title2)
-        }
-        if selectedlist == "dessertlist" {
-            Image(dessertlist[randomNumber].imageDir)
-                .resizable()
-                .frame(width: 250,height: 250)
-            Text(dessertlist[randomNumber].name)
-                .font(.title2)
-        }
-        Button("Random"){
-            randomNumber = Int.random(in: 0...8)
-        }
+        ZStack {
+//            Image("granita")
+//                .resizable()
+//                .opacity(0.2)
+//                .cornerRadius(20)
+//                .edgesIgnoringSafeArea(.all)
+            
+            
+            LinearGradient(gradient: Gradient(colors: [Color.orange.opacity(0.8), Color.clear]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack{
+                Text(menupassed.name)
+                    .font(.system(size: 22, weight: .heavy, design: .serif))
+                    .italic()
+                let selectedlist = selectlist[menupassed.menuType]
+                
+                if selectedlist == "foodlist" {
+                    Image(foodlist[randomNumber].imageDir)
+                        .resizable()
+                        .frame(width: 250,height: 250)
+                        .cornerRadius(20)
+                        .padding(10)
+                        .shadow(radius: 10)
+                    Text(foodlist[randomNumber].name)
+                        .font(.title2)
+                        .italic()
+                }
+                if selectedlist == "drinkslist" {
+                    Image(drinkslist[randomNumber].imageDir)
+                        .resizable()
+                        .frame(width: 250,height: 250)
+                        .frame(width: 200, height: 200)
+                        .cornerRadius(20)
+                        .padding(10)
+                        .shadow(radius: 10)
+                    Text(drinkslist[randomNumber].name)
+                        .font(.title2)
+                        .italic()
+                }
+                if selectedlist == "dessertlist" {
+                    Image(dessertlist[randomNumber].imageDir)
+                        .resizable()
+                        .frame(width: 250,height: 250)
+                        .cornerRadius(20)
+                        .padding(10)
+                        .shadow(radius: 10)
+                    Text(dessertlist[randomNumber].name)
+                        .font(.title2)
+                        .italic()
+                }
+                Button("Random"){
+                    randomNumber = Int.random(in: 0...8)
+                }
 
+            }
+            
+            
+            
+        }
+        }
         
-    }
 }

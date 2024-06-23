@@ -28,8 +28,8 @@ struct SelectPage: View {
                 
                 VStack{
                     Text("Select Random")
-                        .font(.title)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .font(.system(size: 34, weight: .heavy, design: .serif))
+                        .italic()
 
                     ForEach($selectList){
                         singlemenu in

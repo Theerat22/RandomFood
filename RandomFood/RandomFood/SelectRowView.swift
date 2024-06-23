@@ -18,9 +18,9 @@ struct SelectRowView: View {
                     .foregroundColor(.black)
                     
                 Text(menupassed.name)
-                    .font(.title2)
-                    .fontWeight(.heavy)
                     .foregroundColor(Color.white)
+                    .font(.system(size: 22, weight: .heavy, design: .serif))
+                    .italic()
             }
         
     }
