@@ -47,7 +47,7 @@ struct RandomPage: View {
     ]
     @State var selectlist = ["dessertlist","drinkslist","foodlist"]
     
-    @State private var randomNumber = 0
+    @State private var randomNumber = Int.random(in: 0...8)
     var body: some View {
         VStack{
             Text(menupassed.name)
@@ -62,21 +62,21 @@ struct RandomPage: View {
                 .resizable()
                 .frame(width: 250,height: 250)
             Text(foodlist[randomNumber].name)
-                .font(.subheadline)
+                .font(.title2)
         }
         if selectedlist == "drinkslist" {
             Image(drinkslist[randomNumber].imageDir)
                 .resizable()
                 .frame(width: 250,height: 250)
             Text(drinkslist[randomNumber].name)
-                .font(.subheadline)
+                .font(.title2)
         }
         if selectedlist == "dessertlist" {
             Image(dessertlist[randomNumber].imageDir)
                 .resizable()
                 .frame(width: 250,height: 250)
             Text(dessertlist[randomNumber].name)
-                .font(.subheadline)
+                .font(.title2)
         }
         Button("Random"){
             randomNumber = Int.random(in: 0...8)

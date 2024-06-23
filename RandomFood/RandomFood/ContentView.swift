@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @State private var isAnimating = false
+    @State private var navigateToNext = false
     @State var index: Int = 0
     @State var meals: [String] = ["cubeSteakandGravy", "tomYumKoong", "florentineButterChicken"]
     @State var drinks: [String] = ["mintJulep", "kirRoyale", "vesper"]
@@ -21,37 +23,37 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .edgesIgnoringSafeArea(.all)
             
-
+            
             LinearGradient(gradient: Gradient(colors: [Color.orange.opacity(0.8), Color.clear]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             
-
-
+            
+            
             VStack {
-
-                Text("🍛")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
                 Text("Gin Rai Dee?")
-//                    .font(.title)
+                //                    .font(.title)
                     .fontWeight(.bold)
                     .font(.system(size: 34, weight: .heavy, design: .serif))
-                        .italic()
+                    .italic()
                 
-                Button(action: {}, label: {
+                Button{
+                    navigateToNext.toggle()
+                } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 25)
                             .frame(width: 200, height: 50)
+                            .foregroundColor(Color.black)
                         Text("Start your meal")
-//                            .font(.title2)
-    
                             .foregroundColor(Color.white)
                             .font(.system(size: 22, weight: .heavy, design: .serif))
-                                .italic()
-
+                            .italic()
+                        
                     }
-                    
-                })
+                }
+                //                if navigateToNext {
+                //                    SelectPage()
+                //                }
+                
                 
             }
             VStack {
@@ -77,16 +79,20 @@ struct ContentView: View {
                                 .cornerRadius(20)
                                 .padding(10)
                                 .shadow(radius: 10)
-                            }
-
-                          }
- 
-                         }
-
                         }
+                        
                     }
+                    
                 }
+                
             }
+            
+        }.fullScreenCover(isPresented: $navigateToNext, content: {
+            SelectPage()
+        })
+   
+    }
+}
 
 
 
